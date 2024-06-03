@@ -121,6 +121,11 @@ sum(names23$Anzahl)
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
+    
+```{r, results = "hide", message=FALSE, warning=FALSE}
+names22$year <- 2022
+names23$year <- 2023
+```
 
 e)  Combine both datasets into one using `bind_rows()`.
 
