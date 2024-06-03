@@ -45,11 +45,11 @@ c)  For all of the following tasks in this exercise sheet we ask you to
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a
     commit after this answer, see *1c*)
     
-+ Great for Collaboration
-+ Secures files (hard to loose files)
+*+ Great for Collaboration*
+*+ Secures files (hard to loose files)*
 
-- Issues with large files
-- Struggle with binary files
+*- Issues with large files*
+*- Struggle with binary files*
 
 e)  Knit this exercise sheet. Some new files will automatically be
     generated when knitting the sheet e.g. the HTML page. Ignore these
@@ -104,10 +104,20 @@ names22 <- names22 %>% mutate(Anzahl = as.numeric(Anzahl)) %>% mutate(Anzahl = i
 names23 <- names23 %>% mutate(Anzahl = as.numeric(Anzahl)) %>% mutate(Anzahl = ifelse(is.na(Anzahl), 2.5, Anzahl))
 ```
 
-I converted the values in Anzahl (former type: character) to numeric values with the as.numeric() function. This soulution though could not convert the entries "4 oder weniger". They got turned into NAs. As a compromise I turned all of the NAs to the average 2.5.
+*I converted the values in Anzahl (former type: character) to numeric values with the as.numeric() function. This soulution though could not convert the entries "4 oder weniger". They got turned into NAs. As a compromise I turned all of the NAs to the average 2.5.*
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2023. Which year had the bigger baby-boom?
+
+**Total: 2022**
+```{r, results = "hide", message=FALSE, warning=FALSE}
+sum(names22$Anzahl)
+```
+**Total: 2023**
+```{r, results = "hide", message=FALSE, warning=FALSE}
+sum(names23$Anzahl)
+```
+*The year 2022 had a bigger baby-boom*
 
 d)  Add a new column `year` to both datasets which holds the correct
     year for each.
