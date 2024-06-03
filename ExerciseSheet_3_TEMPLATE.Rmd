@@ -88,6 +88,23 @@ b)  Load the data for both years into R. Check the type of the count
     not numeric? Fix the problem in an appropriate manner, it is OK if
     some of the counts are inaccurate because of this. Explain your
     solution and the repercussions.
+    
+```{r, results = "hide", message=FALSE, warning=FALSE}
+library(tidyverse)
+names22 <- read.csv(
+  "C:/Users/Aleks/Desktop/RStudio2/Graded Exercise 3-20240602/2024-exeRcise-sheet-3/data/open_data_portal_2022.csv")
+
+names23 <- read.csv(
+  "C:/Users/Aleks/Desktop/RStudio2/Graded Exercise 3-20240602/2024-exeRcise-sheet-3/data/vornamen-muenchen-2023.csv")
+
+print(typeof(names22$Anzahl))
+print(typeof(names23$Anzahl))
+
+names22 <- names22 %>% mutate(Anzahl = as.numeric(Anzahl)) %>% mutate(Anzahl = ifelse(is.na(Anzahl), 2.5, Anzahl))
+names23 <- names23 %>% mutate(Anzahl = as.numeric(Anzahl)) %>% mutate(Anzahl = ifelse(is.na(Anzahl), 2.5, Anzahl))
+```
+
+I converted the values in Anzahl (former type: character) to numeric values with the as.numeric() function. This soulution though could not convert the entries "4 oder weniger". They got turned into NAs. As a compromise I turned all of the NAs to the average 2.5.
 
 c)  Calculate the total number of babies born in Munich in 2022
     and 2023. Which year had the bigger baby-boom?
