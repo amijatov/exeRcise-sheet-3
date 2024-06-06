@@ -155,14 +155,14 @@ a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets>
 b)  Download the dataset and track it in git.
 
 ```{r, message=FALSE, warning=FALSE}
-plastic_waste <- read.csv("https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Plastic%20Waste%20-%20Jambeck%20et%20al.%20(2015)/Plastic%20Waste%20-%20Jambeck%20et%20al.%20(2015).csv")
+plastic_waste <- read.csv("C:/Users/Aleks/Desktop/RStudio2/Graded Exercise 3-20240602/2024-exeRcise-sheet-3/data/Plastic Waste - Jambeck et al. (2015).csv")
 ```
 
 
 c)  Put the name / title of the dataset and a link to it below.
 
--   Dataset Name: ...
--   Link: <https://github.com/owid/owid-datasets/blob/master/datasets/Biodiversity%20habitat%20loss%20(Williams%20et%20al.%202021)/Biodiversity%20habitat%20loss%20(Williams%20et%20al.%202021).csv>...
+-   Dataset Name: Plastic Waste - Jambeck et al. (2015)
+-   Link: <https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Plastic%20Waste%20-%20Jambeck%20et%20al.%20(2015)/Plastic%20Waste%20-%20Jambeck%20et%20al.%20(2015).csv>
 
 
 d)  Come up with a (research) question you want to answer with the data
