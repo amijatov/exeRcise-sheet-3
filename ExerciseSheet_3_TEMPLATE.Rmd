@@ -153,10 +153,17 @@ a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets>
     and choose a dataset that interests you. You can have a look at
     <https://ourworldindata.org/> to gather some inspiration.
 b)  Download the dataset and track it in git.
+
+```{r, message=FALSE, warning=FALSE}
+plastic_waste <- read.csv("https://raw.githubusercontent.com/owid/owid-datasets/master/datasets/Plastic%20Waste%20-%20Jambeck%20et%20al.%20(2015)/Plastic%20Waste%20-%20Jambeck%20et%20al.%20(2015).csv")
+```
+
+
 c)  Put the name / title of the dataset and a link to it below.
 
 -   Dataset Name: ...
--   Link: <https://github.com/owid/owid-datasets/>...
+-   Link: <https://github.com/owid/owid-datasets/blob/master/datasets/Biodiversity%20habitat%20loss%20(Williams%20et%20al.%202021)/Biodiversity%20habitat%20loss%20(Williams%20et%20al.%202021).csv>...
+
 
 d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
