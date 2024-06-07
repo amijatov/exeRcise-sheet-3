@@ -173,6 +173,12 @@ d)  Come up with a (research) question you want to answer with the data
 **What 10 countries had the highest plastic waste per person in 2010?**
  
 e)  Use R to answer your chosen question.
+
+```{r, message=FALSE, warning=FALSE}
+waste <- plastic_waste %>% select("Entity", "Per.capita.plastic.waste..kg.person.day.") %>% arrange(desc("Per.capita.plastic.waste..kg.person.day."))
+
+knitr::kable(head(waste, 10), caption = "Top 10 countries with highest plastic waste per person 2010")
+```
 f)  Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
     correctly label the figure.
